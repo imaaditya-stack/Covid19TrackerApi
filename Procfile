@@ -1,1 +1,1 @@
-web: gunicorn COVID19.wsgi:application
+web: gunicorn COVID19.wsgi
