@@ -1,1 +1,1 @@
-web: gunicorn COVID19.wsgi --log-file -
+web: gunicorn COVID19.wsgi:application
