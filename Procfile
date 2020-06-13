@@ -1,1 +1,1 @@
-web: gunicorn COVID19.wsgi
+web: gunicorn COVID19.wsgi:application --preload
