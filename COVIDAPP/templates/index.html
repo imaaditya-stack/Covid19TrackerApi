@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+    <h1 class="mt-2 mb-2" style="letter-spacing:4px;">Covid-19</h1>
+    <img src="https://www.who.int/images/default-source/health-topics/coronavirus/gettyimages-1203376093.tmb-1920v.png?Culture=en&sfvrsn=6e0c1bc7_6" alt="" class="img-fluid">
+    <p class="mt-3 w-100">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. <br><br> Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.</p>
+
+    <h2 class="mt-5 mb-3" style="letter-spacing:4px;">Maharashtra stats</h2>
+    <p class="text-center"><strong>Color Convention: </strong>
+        <span style="color: #1158F0;">new</span>
+        <span style="color: #F0E615;">active</span>
+        <span style="color: #35DA11;">recovered</span>
+        <span style="color: #EA1717;">deaths</span>
+    </p>
+    <div class="citystats">
+        {% for city in citydata %}
+        <div class="card m-2 mb-5" style="width: 30rem;" data-aos="fade-up">
+          <div class="card-body">
+            <h4>{{ city.cityname }}</h4>
+            <ul class="list-inline">
+                <li class="list-inline-item" style="color: #1158F0;">{{ city.newcases }}</li>
+                <li class="list-inline-item" style="color: #F0E615;">{{ city.activecases }}</li>
+                <li class="list-inline-item" style="color: #35DA11">{{ city.recoveredcases }}</li>
+                <li class="list-inline-item" style="color: #EA1717;">{{ city.totaldeaths }}</li>
+            </ul>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+    <h1 class="mt-5" style="letter-spacing:4px;">Prevention</h1>
+    <p class="text-center">To prevent infection and to slow transmission of COVID-19, do the following:</p>
+    <ul>
+        <li>Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub.</li>
+        <li>Maintain at least 1 metre distance between you and people coughing or sneezing.</li>
+        <li>Avoid touching your face.</li>
+        <li>Cover your mouth and nose when coughing or sneezing.</li>
+        <li>Stay home if you feel unwell.</li>
+        <li>Refrain from smoking and other activities that weaken the lungs.</li>
+        <li>Practice physical distancing by avoiding unnecessary travel and staying away from large groups of people.</li>
+    </ul>
+    <p class="mb-5 text-center text-uppercase" style="color: #0040C8;">Developed by Aditya Ghag</p>
+
+{% endblock %}
