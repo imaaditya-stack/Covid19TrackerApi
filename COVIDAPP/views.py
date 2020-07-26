@@ -17,13 +17,7 @@ def home(request):
     soupobject = BeautifulSoup(content,"html.parser")
 
     cities = soupobject.find_all("div",attrs={"class": "v-list-item__content py-1"})
-
-    # context = {"cityname": cities.find("div",attrs={"class":"layout"}).next_element.text,
-    #            "newcases": cities.find("span",attrs={"class":"v-list-item__action-text subtitle-1 bolder font-weight-bold pink--text text--accent-3"}).text,
-    #            "activecases": cities.find("span",attrs={"class":"pink--text text--accent-3"}).text,
-    #            "recoveredcases": cities.find("span",attrs={"class":"green--text text--accent-3"}).text,
-    #            "totaldeaths": cities.find("span",attrs={"class":"grey--text"}).text,
-            # }
+    
     citydata = []
 
     for city in range(len(cities)):
