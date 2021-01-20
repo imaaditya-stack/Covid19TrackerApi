@@ -2,6 +2,9 @@
 
 A web application to track live cases of COVID-19 in major cities of Maharashtra and all over India using Django Framework and Web Scraping.
 
+Live Demo: <a href="https://mahacovid19tracker.herokuapp.com/">View website</a>
+
+
 <br>
 
 ![covid](https://user-images.githubusercontent.com/59827782/105170659-44320f80-5b43-11eb-9db0-bd7a577e7148.png)
